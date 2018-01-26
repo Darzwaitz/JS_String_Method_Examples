@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>string methods</title>
+</head>
+<body>
+
+	<script>
+
+		const string1 = "Joey doesn't share food";
+		for (var i = 0; i < string1.length; i++) {
+			if (string1.charAt(i) === "a") {
+				console.log("There's an 'a' at index " + i); //logs 15 - index of 'a'
+			}
+		}
+						//
+		const string2 = "this one goes up to 11";
+		let indexNumberTest = string2.indexOf("goes up");
+
+		//logs 9 - index of 'goes up'
+		console.log("you can find string 'goes up' at index " + indexNumberTest);
+						//
+		//create substring starting at index specified and ending at, though not including 2nd specified index
+		let substring1 = string2.substring(0,16)
+		console.log(substring1); // logs 'let there be' 
+						//
+		const string3 = "let there be code";
+
+		let sliceString = string3.slice(0,13);//slice string from 0 index upto, not including index 13
+		console.log(sliceString);// logs 'let there be'
+
+		//split the string into an array with an empty space as a divider 
+		let splitArray = string3.split(" ");
+
+		console.log("Split array is ", splitArray);//2 arguments are passed here, the comma separating the array output to prevent the array being outputted as a full string
+
+						//
+		const string4 = "got up today";
+		//pass in string to be replaced, a comma, then string to replace
+		let replaceString = string4.replace("today", "today, what a day");
+		console.log("Replaced String: " + replaceString); //logs 'got up today, what a day'
+
+
+	</script>
+	
+</body>
+</html>
